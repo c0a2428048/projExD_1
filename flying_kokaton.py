@@ -25,18 +25,16 @@ def main():
         if tmr==3200:
             tmr=0
 
-        kk_rct.move_ip((-1, 0))
-
-        move=(0,0)
+        move=(-1,0)
 
         if key_lst[pg.K_UP]:
-            move=(0,-1)
+            move=(-1,-1)
         elif key_lst[pg.K_DOWN]:
-            move=(0, 1)
+            move=(-1, 1)
         elif key_lst[pg.K_LEFT]:
-            move=(-1, 0)
+            move=(-2, 0)
         elif key_lst[pg.K_RIGHT]:
-            move=(2, 0)
+            move=(1, 0)
         
         kk_rct.move_ip(move)
 

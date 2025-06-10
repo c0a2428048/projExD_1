@@ -21,17 +21,19 @@ def main():
             if event.type == pg.QUIT: return
 
         key_lst = pg.key.get_pressed()
-        if key_lst[pg.K_UP]:
-            kk_rct.move_ip((0, -1))
-        elif key_lst[pg.K_DOWN]:
-            kk_rct.move_ip((0, 1))
-        elif key_lst[pg.K_LEFT]:
-            kk_rct.move_ip((-1, 0))
-        elif key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((1, 0))
+        # if key_lst[pg.K_UP]:
+        #     kk_rct.move_ip((0, -1))
+        # elif key_lst[pg.K_DOWN]:
+        #     kk_rct.move_ip((0, 1))
+        # elif key_lst[pg.K_LEFT]:
+        #     kk_rct.move_ip((-1, 0))
+        # elif key_lst[pg.K_RIGHT]:
+        #     kk_rct.move_ip((1, 0))
         
         if tmr==3200:
             tmr=0
+
+        kk_rct.move_ip((-1, 0))
 
         screen.blit(bg_img, [-tmr, 0])
         screen.blit(bg_img2, [-tmr+1600, 0])
